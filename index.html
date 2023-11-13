@@ -43,11 +43,11 @@
             <div class="form-row form-name">
 
                 <div class="form-inputs ">
-                    <label for="firstname">FIRST NAME</label>
+                    <label for="firstname">*FIRST NAME</label>
                     <input type="text" id="firstname" name="firstname">    
                 </div>    
                 <div class="form-inputs">
-                    <label for="secondname">LAST NAME</label>
+                    <label for="secondname">*LAST NAME</label>
                     <input type="text" id="secondname" name="secondname">    
                 </div>    
             </div>
@@ -55,44 +55,41 @@
             <div class="form-row form-contact">
 
                 <div class="form-inputs">
-                    <label for="email">EMAIL</label>
+                    <label for="email">*EMAIL</label>
                     <input type="email" id="email" name="email">
                 </div>    
                     
                 <div class="form-inputs">
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone" name="phone">    
+                    <input type="number" id="phone" name="phone">    
                 </div>
             </div>
 
             <div class="form-row form-pass">
                 
                 <div class="form-inputs">
-                    <label for="password">PASSWORD</label>
+                    <label for="password">*PASSWORD</label>
                     <input type="password" id="password" name="password">    
                 </div>    
 
                 <div class="form-inputs">
-                    <label for="confirmPassword">CONFIRM PASSWORD</label>
+                    <label for="confirmPassword">*CONFIRM PASSWORD</label>
                     <input type="password" id="confirmPassword" name="confirmPassword">    
                 </div>   
                
             </div>
 
-            <div>
-            <div class="form-inputs">
+                 
+                    <div class="noMatch">Passwords don't match.</div>
 
-                <div class="noMatch"></div>
-
-            </div>
-        </div>
-
+                
 
 
         <div class="submission">
             <button class="subBtn" type="submit">
                 Create Account
             </button>
+            <p>Already have an account?  <a href="https://www.anythingsoup.com/odin-calculator">Log in</a></p>
         </div>
     </form>
 
