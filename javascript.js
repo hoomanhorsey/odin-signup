@@ -5,6 +5,8 @@ let confirmPwd = document.querySelector('#confirmPassword');
 
 let subBtn = document.querySelector('button');
 
+
+
 let form = document.querySelector('form');
 
 form.addEventListener('submit', (e) => {
@@ -17,10 +19,12 @@ form.addEventListener('submit', (e) => {
     
     if (password != confirmPassword) {
         alert("passwords don't match");
+        let noMatch = document.querySelector('.noMatch');
+
+        noMatch.textContent = 'No Match';
     } else {
         alert("Passwords Match");
     }
-    console.log('hi');
 
 
     })

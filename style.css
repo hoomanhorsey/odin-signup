@@ -1,26 +1,106 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
 body {
     display: flex;
-    background-color: rgb(251, 251, 251);
-    width: 100vw;
-    height: 100vh;
-    padding: 0px 10vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1640px;
+    justify-content: center;
+    margin: auto;
+    height: 100%;
 
+    background-color: rgb(251, 251, 251);
+
+    
     box-sizing: border-box;
 }
 
-.panel-left {
+.panel-left {   
+    display: flex;   
+    flex-direction: column;
+    
+    flex:auto;
+    flex-shrink: 0;
+
+    /* width: 45%; */
+    max-width: 738px;
+    background-color: rgb(109, 154, 112);
+
+    position:relative;
+
+    justify-content:flex-start;
+    /* align-items: center; */
+}
+
+.panel-right {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
     flex:auto;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    justify-content:center;
 
-    position:relative;
-    height: 100vh;
-    width: 854px;
+    background-color: white;
+    /* align-items: center; */
+
+    max-width: 902px;
+    /* width: 55%; */
 
 
-    justify-content: center;
-    align-items: center;
+    /* padding: 0px 10vw 0px 0px ; */
 }
+
 
 .image {
     
@@ -28,24 +108,20 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 
-    background-color: rgb(109, 154, 112);
-    height: 100%;
-    width: 100%;
-   
-    background-image: url("./floofy.jpg");      
-}
-img {
-    object-fit: cover ;
+    height: 1231px;
+    width: 738px;
+    background-image: url("./floofcropped.jpg");     
+    background-size: 100%;
 
 }
+
 
 .logo {
     display: flex;
     justify-content: center;
     flex: auto;
     position:absolute;
-    top: 60vh;
-    height: 200px;
+    top: 60%;
     width: 100%;
     background-color: paleturquoise;
     opacity:.4;
@@ -60,27 +136,18 @@ img {
 }
 
 .logo-text {
-    flex: 1;
-    max-width: 100%;
+    flex: auto;
     text-align: center;
-    overflow: hidden;}
+    overflow: hidden; 
+    width: auto;
+
+}
 
     
 
 
 
-.panel-right {
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    flex-direction: column;
-    flex:auto;
-
-    height: 100vh;
-    width: 1705px;
-
-    /* padding: 0px 10vw 0px 0px ; */
-}
 
 /* .above-intro {
     flex: auto;
@@ -90,15 +157,21 @@ img {
 
 .intro {
     flex: auto;
-    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 97%);   
+    width: auto;
+    /* padding: calc(60px + 0.5vw);  */
+}
 
-    font-size: calc(16px + 0.5vw);
+.intro-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(20px + 0.5vw);
     font-weight: 500;
     text-wrap: wrap;
-   
-    height: 20vh;
-    width: 100%;
-    /* padding: calc(60px + 0.5vw);  */
+    margin-top: 150px;
+    padding: calc(60px + 0.5vw); 
+
+
+
 }
 
 /* p {
@@ -110,26 +183,36 @@ img {
     flex-direction: column;
     flex: auto;
 
+    padding-top: 50px;
+
     background-color: white;
-    height: 40vh;
-    width: 100%;
+    width: auto;
+    /* height: 40vh;
+    width: 100%; */
     /* padding: calc(60px + 0.5vw);  */
 
-    border: 1px solid #D6D9DC;
-    margin: 0 0 40px 0;
+    /* border: 1px solid #D6D9DC;
+    margin: 0 0 40px 0; */ */
 }
 
 
 .form-row {
     display: flex;
     flex-direction: row;
-    flex: auto;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    width: auto;
+    
+    /*flex: auto;
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 10px;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-left: 30px;
 
-    padding: 10px calc(20px + 0.5vw) ; 
+
+    padding: 10px calc(20px + 0.5vw) ;  */
 
   }
   
@@ -151,28 +234,44 @@ img {
 
 
 
-/* .form-name, .form-contact, .form-pass  {
-    display: flex;
-    flex: auto;
-} */
+.form-name, .form-contact, .form-pass  {
+    padding-left: 100px;
+} 
 
-.form-input{
-    flex: auto;
-    padding: 0px;
-    margin-bottom: 5px;
-    height: 20px;
+.form-row >.form-pass {
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.49)
+    
+}
 
+.form-inputs {
+    flex: auto;
+    flex-shrink: 0;
+    width: 30px;
+
+   
+
+    
 }
   
 .form-row label {
     display: block;
     font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 2px;
     font-weight: 800;
+    font-size: calc(1.2rem);
+    margin-top: 10px;
+    margin-bottom: 10px;
+
   }
 
+input {
 
+    width: 250px;
+    height: 30px;
+    border-radius: 3px; 
+    border: 1px solid #D6D9DC;
+    font-size: 18px;
 
+}
 
 
 .submission {
@@ -181,13 +280,15 @@ img {
     height: 40vh;
     width: 100%;
     margin: 0px;
+    background-color: hsl(0, 0%, 97%);   
 
-    background-color: #c7d5ba;
+
+    /* background-color: #c7d5ba; */
 
 }
 
   .subBtn {
-    margin: 40px 40px;
+    margin: 50px 100px;
     padding: 15px 40px;
     color: white;
     background-color: #596D48;
@@ -198,4 +299,17 @@ img {
     font-weight:800;
     font-size: 1.2rem;
     box-shadow: 2px 4px lightgrey;
+}
+
+.noMatch {
+    margin-left: 100px;
+    width: auto;
+}
+
+.italic-word {
+    font-style: italic;
+}
+
+.bold-word {
+    font-weight: 900;
 }
