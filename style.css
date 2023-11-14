@@ -215,10 +215,18 @@ input {
     width: 250px;
     height: 30px;
     border-radius: 3px; 
-    border: 1px solid #D6D9DC;
+    border: 1px solid;
+    border-color: lightgrey;
     font-size: 18px;
 }
 
+
+input:focus {
+
+    outline: none !important;
+    border:1px solid blue;
+    box-shadow: 0 0 10px #719ECE;  /* background-color: blue; */
+}
 
 .submission {
     flex: auto;
@@ -243,7 +251,6 @@ input {
     box-shadow: black 0 5px 10px -5px;
 
 }
-
 
 
 

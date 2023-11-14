@@ -26,7 +26,6 @@
 </div>
 
 <div class="panel-right">
-    <!-- <div class="above-intro"></div> -->
 
     <div class="intro">
         <div class="intro-text">
@@ -38,17 +37,17 @@
 
 
 
-        <form autocomplete="off" class="form-div" action="" method="post">
+        <form autocomplete="off" class="form-div" action=# method="post">
 
             <div class="form-row form-name">
 
                 <div class="form-inputs ">
                     <label for="firstname">*FIRST NAME</label>
-                    <input type="text" id="firstname" name="firstname">    
+                    <input type="text" id="firstname" name="firstname" required>    
                 </div>    
                 <div class="form-inputs">
                     <label for="secondname">*LAST NAME</label>
-                    <input type="text" id="secondname" name="secondname">    
+                    <input type="text" id="secondname" name="secondname" required>    
                 </div>    
             </div>
 
@@ -69,24 +68,25 @@
                 
                 <div class="form-inputs">
                     <label for="password">*PASSWORD</label>
-                    <input type="password" id="password" name="password">    
+                    <input type="password" id="password" name="password" required>    
                 </div>    
 
                 <div class="form-inputs">
                     <label for="confirmPassword">*CONFIRM PASSWORD</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword">    
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>    
                 </div>   
                
             </div>
 
                  
-                    <div class="noMatch">Passwords don't match.</div>
+                    <div class="noMatch"><br></div>
 
                 
 
 
         <div class="submission">
-            <button class="subBtn" type="submit">
+            <button class="subBtn" type="submit"> 
+                <!-- change button type is 'button' to ensure that form doesn't not submit and allow html text to be displayed -->
                 Create Account
             </button>
             <p>Already have an account?  <a href="https://www.anythingsoup.com/odin-calculator">Log in</a></p>
